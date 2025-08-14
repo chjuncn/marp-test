@@ -14,13 +14,18 @@ export const Pre: React.FC = (props) => {
   )
 }
 
-export const toHastCodeHandler = (h, { position, lang, value, marp }) => {
+export const toHastCodeHandler = (h, { position, lang, value, marp, report }) => {
   if (marp) {
     return h(position, 'marp-slides', {
       'data-comments': JSON.stringify(marp.comments),
       'data-css': marp.css,
       'data-html': JSON.stringify(marp.html),
       'data-fonts': JSON.stringify(marp.fonts),
+    })
+  }
+  if (report) {
+    return h(position, 'marp-report', {
+      'data-markdown': report.markdown,
     })
   }
 

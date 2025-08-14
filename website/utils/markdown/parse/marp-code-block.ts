@@ -6,8 +6,8 @@ export const marpCodeBlock = () => async (tree) => {
   const marpNodes = new Set<Literal<string> & { marp?: RenderedMarp }>()
 
   visit(tree, 'code', (node) => {
-    const lang = node.lang as string
-    const langSub = lang.split(':').pop() as string
+    const lang = (node.lang as string | undefined) || ''
+    const langSub = lang ? (lang.split(':').pop() as string) : undefined
 
     if (langSub === 'marp') marpNodes.add(node)
   })
