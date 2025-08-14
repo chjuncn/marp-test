@@ -8,6 +8,7 @@ import { Image } from 'components/markdown/Image'
 import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
 import { MarpReport } from 'components/MarpReport'
 import { MovableBlock } from 'components/Interactive/MovableBlock'
+import { ImageEditor } from 'components/Interactive/ImageEditor'
 
 const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   a: Anchor,
@@ -23,6 +24,12 @@ const remarkReactComponents: Record<string, FunctionComponent<any>> = {
     // Render interactive movable area from data-json
     // eslint-disable-next-line react/jsx-no-undef
     createElement(MovableBlock as any, { json: props['data-json'] })
+  )) as unknown as FunctionComponent<any>,
+  'image-editor': ((props: any) => (
+    createElement(ImageEditor as any, {
+      src: props['data-src'],
+      width: Number(props['data-width'] || 640),
+    })
   )) as unknown as FunctionComponent<any>,
   pre: Pre,
   img: Image,

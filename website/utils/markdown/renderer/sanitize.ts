@@ -12,5 +12,6 @@ export const sanitize = {
     'marp-slides',
     'marp-report',
     'movable-block',
+    'image-editor',
   ],
 }

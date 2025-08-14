@@ -1,5 +1,6 @@
 import { CodeBlock } from '../CodeBlock'
 import { MovableBlock } from 'components/Interactive/MovableBlock'
+import { ImageEditor } from 'components/Interactive/ImageEditor'
 
 export const Pre: React.FC = (props) => {
   if (props['data-code'] === undefined) return <pre {...props} />
@@ -35,6 +36,18 @@ export const toHastCodeHandler = (h, { position, lang, value, marp, report }) =>
     return h(position, 'movable-block', {
       'data-json': String(value || ''),
     })
+  }
+
+  if ((lang || '').trim() === 'image_editor') {
+    try {
+      const config = JSON.parse(String(value || '{}'))
+      return h(position, 'image-editor', {
+        'data-src': config.src,
+        'data-width': String(config.width || ''),
+      })
+    } catch {
+      return h(position, 'pre', { 'data-code': value, 'data-language': lang?.trim() }, [])
+    }
   }
 
   return h(
