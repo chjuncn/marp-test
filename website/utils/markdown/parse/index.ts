@@ -6,6 +6,7 @@ import { removePosition } from 'unist-util-remove-position'
 import { imageParagraphToFigure } from './image-paragraph-to-figure'
 import { marpCodeBlock } from './marp-code-block'
 import { reportCodeBlock } from './report-code-block'
+import { reportMergeBlock } from './report-merge-block'
 
 let parser: Processor | undefined
 
@@ -19,6 +20,7 @@ export const parse = async (md: string) => {
       .use(imageParagraphToFigure)
       .use([marpCodeBlock])
       .use([reportCodeBlock])
+      .use([reportMergeBlock])
 
   return removePosition(await parser.run(parser.parse(md)), true)
 }

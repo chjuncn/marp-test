@@ -1,4 +1,5 @@
 import { CodeBlock } from '../CodeBlock'
+import { MovableBlock } from 'components/Interactive/MovableBlock'
 
 export const Pre: React.FC = (props) => {
   if (props['data-code'] === undefined) return <pre {...props} />
@@ -26,6 +27,13 @@ export const toHastCodeHandler = (h, { position, lang, value, marp, report }) =>
   if (report) {
     return h(position, 'marp-report', {
       'data-markdown': report.markdown,
+    })
+  }
+
+  // Interactive movable area: ```movable {"width":..., "height":..., "items":[{...}]}
+  if ((lang || '').trim() === 'movable') {
+    return h(position, 'movable-block', {
+      'data-json': String(value || ''),
     })
   }
 

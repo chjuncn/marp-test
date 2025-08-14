@@ -7,6 +7,7 @@ import * as Heading from 'components/markdown/Heading'
 import { Image } from 'components/markdown/Image'
 import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
 import { MarpReport } from 'components/MarpReport'
+import { MovableBlock } from 'components/Interactive/MovableBlock'
 
 const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   a: Anchor,
@@ -18,6 +19,11 @@ const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   h6: Heading.H6,
   'marp-slides': MarpSlides,
   'marp-report': MarpReport,
+  'movable-block': ((props: any) => (
+    // Render interactive movable area from data-json
+    // eslint-disable-next-line react/jsx-no-undef
+    createElement(MovableBlock as any, { json: props['data-json'] })
+  )) as unknown as FunctionComponent<any>,
   pre: Pre,
   img: Image,
 }

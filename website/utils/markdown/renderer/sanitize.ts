@@ -7,5 +7,10 @@ export const sanitize = {
     '*': [...(defaultSchema.attributes?.['*'] ?? []), 'data*'],
   },
   clobberPrefix: '',
-  tagNames: [...(defaultSchema.tagNames ?? []), 'marp-slides', 'marp-report'],
+  tagNames: [
+    ...(defaultSchema.tagNames ?? []),
+    'marp-slides',
+    'marp-report',
+    'movable-block',
+  ],
 }
