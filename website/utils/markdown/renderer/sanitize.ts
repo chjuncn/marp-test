@@ -13,5 +13,6 @@ export const sanitize = {
     'marp-report',
     'movable-block',
     'image-editor',
+    'table-vanilla',
   ],
 }

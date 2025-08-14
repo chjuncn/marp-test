@@ -1,5 +1,5 @@
 ---
-title: Monthly Product Report
+title: Embedded Monthly Product Report
 author: Alice
 date: 2025-05-01
 kpi:

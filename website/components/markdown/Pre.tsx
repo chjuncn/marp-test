@@ -1,6 +1,7 @@
 import { CodeBlock } from '../CodeBlock'
 import { MovableBlock } from 'components/Interactive/MovableBlock'
 import { ImageEditor } from 'components/Interactive/ImageEditor'
+import { TableVanilla } from 'components/Interactive/TableVanilla'
 
 export const Pre: React.FC = (props) => {
   if (props['data-code'] === undefined) return <pre {...props} />
@@ -48,6 +49,10 @@ export const toHastCodeHandler = (h, { position, lang, value, marp, report }) =>
     } catch {
       return h(position, 'pre', { 'data-code': value, 'data-language': lang?.trim() }, [])
     }
+  }
+
+  if ((lang || '').trim() === 'table_theme_vanilla') {
+    return h(position, 'table-vanilla', { 'data-json': String(value || '{}') })
   }
 
   return h(

@@ -24,7 +24,7 @@ Date: **{{date}}**
 
 ## Screenshot
 
-![Dashboard](/assets/marp-cli.png "Dashboard")
+![Dashboard](/assets/report/cat2.png "Dashboard")
 
 ## Editable image (image_editor)
 

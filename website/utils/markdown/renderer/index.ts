@@ -9,6 +9,7 @@ import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
 import { MarpReport } from 'components/MarpReport'
 import { MovableBlock } from 'components/Interactive/MovableBlock'
 import { ImageEditor } from 'components/Interactive/ImageEditor'
+import { TableVanilla } from 'components/Interactive/TableVanilla'
 
 const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   a: Anchor,
@@ -30,6 +31,9 @@ const remarkReactComponents: Record<string, FunctionComponent<any>> = {
       src: props['data-src'],
       width: Number(props['data-width'] || 640),
     })
+  )) as unknown as FunctionComponent<any>,
+  'table-vanilla': ((props: any) => (
+    createElement(TableVanilla as any, { json: props['data-json'] })
   )) as unknown as FunctionComponent<any>,
   pre: Pre,
   img: Image,
