@@ -22,11 +22,8 @@ Date: **{{date}}**
 - Top region: {{highlights.topRegion}}
 - New features: {{highlights.newFeatures}}
 
-## Screenshot
 
-![Dashboard](/assets/report/cat2.png "Dashboard")
-
-## Editable image (image_editor)
+# Editable image (image_editor)
 
 You can put an image into an editor so viewers can crop/download it from the report:
 

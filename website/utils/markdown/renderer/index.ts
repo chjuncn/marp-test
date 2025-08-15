@@ -10,6 +10,7 @@ import { MarpReport } from 'components/MarpReport'
 import { MovableBlock } from 'components/Interactive/MovableBlock'
 import { ImageEditor } from 'components/Interactive/ImageEditor'
 import { TableVanilla } from 'components/Interactive/TableVanilla'
+import { CodeTabs } from 'components/Interactive/CodeTabs'
 
 const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   a: Anchor,
@@ -34,6 +35,9 @@ const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   )) as unknown as FunctionComponent<any>,
   'table-vanilla': ((props: any) => (
     createElement(TableVanilla as any, { json: props['data-json'] })
+  )) as unknown as FunctionComponent<any>,
+  'code-tabs': ((props: any) => (
+    createElement(CodeTabs as any, { tabsJson: props['data-tabs'] })
   )) as unknown as FunctionComponent<any>,
   pre: Pre,
   img: Image,

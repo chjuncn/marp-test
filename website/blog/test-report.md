@@ -31,6 +31,7 @@ This is a continuous article (not slides).
 }
 ```
 
+
 You can even embed slides inside the report:
 
 ```markdown:marp
@@ -65,13 +66,13 @@ data: data-report.md
 
 ```markdown:report
 
-## Python plot example
+# Python plot example
 
 Below we embed an SVG produced by a Python script (e.g., Matplotlib `plt.savefig('python-plot.svg')`). In real usage, generate the SVG/PNG in your build step and reference it here.
 
 ![Sample Python plot](/assets/report/python-plot.svg "Figure: Output from Python/Matplotlib")
 
-## Interactive movable area example
+# Interactive movable area example
 
 You can declare a movable area with items via a fenced code block. Data can also be provided from `data-report.md` by putting a JSON object into a variable and referencing it with `{{movables}}`.
 
@@ -85,4 +86,13 @@ You can declare a movable area with items via a fenced code block. Data can also
     { "id": "C", "x": 360, "y": 60,  "content": "Gamma" }
   ]
 }
+```
+
+
+# Raw Markdown sources
+
+```report-tabs
+test-report.md
+template-report.md
+data-report.md
 ```

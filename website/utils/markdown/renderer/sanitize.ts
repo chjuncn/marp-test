@@ -14,5 +14,6 @@ export const sanitize = {
     'movable-block',
     'image-editor',
     'table-vanilla',
+    'code-tabs',
   ],
 }
