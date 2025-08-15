@@ -19,6 +19,6 @@
     "assets.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "../marp-report-react/src/image/Annotator.tsx"  ],
   "exclude": ["node_modules"]
 }

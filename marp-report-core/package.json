@@ -1,0 +1,27 @@
+{
+  "name": "marp-report-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Core toolkit for Marp Report: remark plugins, schemas, and helpers to turn report-flavored Markdown into renderable AST with custom elements.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "debug": "^4.4.1",
+    "gray-matter": "^4.0.3",
+    "remark-gfm": "^3.0.0",
+    "remark-parse": "^10.0.0",
+    "remark-slug": "^7.0.0",
+    "unified": "^10.1.2",
+    "unist-util-remove-position": "^4.0.1",
+    "unist-util-visit": "^4.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}

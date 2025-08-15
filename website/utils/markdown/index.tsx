@@ -1,9 +1,11 @@
-import matter from 'gray-matter'
+import * as matterModule from 'gray-matter'
 import { parse as mdParse } from './parse'
 import { renderer } from './renderer'
 import { AnchorLinkProvider } from 'components/markdown/Heading'
 
 const toJSON = (value: any) => JSON.parse(JSON.stringify(value))
+
+const matter = (matterModule as any).default || matterModule
 
 export const parseMatter = (md: string) =>
   matter(md, { excerpt_separator: '<!-- more -->' })

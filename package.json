@@ -47,5 +47,8 @@
   },
   "resolutions": {
     "json5": "^2.2.2"
+  },
+  "dependencies": {
+    "zod": "^4.0.17"
   }
 }

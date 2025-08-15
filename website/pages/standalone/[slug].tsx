@@ -1,8 +1,8 @@
-import path from 'path'
-import Head from 'next/head'
+import * as path from 'path'
 import { GetStaticPaths, GetStaticPropsContext, InferGetStaticPropsType } from 'next'
-import { parse, renderToReact } from 'utils/markdown'
+import Head from 'next/head'
 import { Typography } from 'components/Typography'
+import { parse, renderToReact } from 'utils/markdown'
 
 const STANDALONE_SLUGS = ['test-report', 'template-report', 'data-report'] as const
 

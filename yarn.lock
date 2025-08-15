@@ -1302,10 +1302,12 @@
     "@primer/octicons-react" "^17.10.0"
     body-scroll-lock "^4.0.0-beta.0"
     classnames "^2.3.2"
-    cropperjs "^2.0.1"
+    cropperjs "^1.5.13"
     focus-trap-react "^10.0.2"
     focus-visible "^5.2.0"
     hast-util-sanitize "^4.0.0"
+    marp-report-core "file:../marp-report-core"
+    marp-report-react "file:../marp-report-react"
     next "^13.1.1"
     nprogress "^0.2.0"
     prism-react-renderer "^1.3.5"
@@ -1316,6 +1318,7 @@
     swiper "^8.4.5"
     use-media "^1.4.0"
     wicg-inert "^3.1.2"
+    zod "^3.23.8"
 
 "@marp-team/marpit-svg-polyfill@^2.1.0":
   version "2.1.0"
@@ -1638,6 +1641,13 @@
   version "12.20.24"
   resolved "https://registry.npmjs.org/@types/node/-/node-12.20.24.tgz"
   integrity sha512-yxDeaQIAJlMav7fH5AQqPH1u8YIuhYJXYBzxaQ4PifsU0GDO38MSdmEDeRlIxrKbC6NbEaaEHDanWb+y30U8SQ==
+
+"@types/node@24.2.1":
+  version "24.2.1"
+  resolved "https://registry.npmjs.org/@types/node/-/node-24.2.1.tgz"
+  integrity sha512-DRh5K+ka5eJic8CjH7td8QpYEV6Zo10gfRkjHCO3weqZHWDtAaSTFtl4+VMqOJ4N5jcuhZ9/l+yy8rVgw7BQeQ==
+  dependencies:
+    undici-types "~7.10.0"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -2534,12 +2544,12 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4:
-  version "4.3.4"
-  resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
-  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4, debug@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.npmjs.org/debug/-/debug-4.4.1.tgz"
+  integrity sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==
   dependencies:
-    ms "2.1.2"
+    ms "^2.1.3"
 
 decamelize@^1.2.0:
   version "1.2.0"
@@ -4113,6 +4123,28 @@ markdown-table@^3.0.0:
   resolved "https://registry.npmjs.org/markdown-table/-/markdown-table-3.0.3.tgz"
   integrity sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==
 
+"marp-report-core@file:../marp-report-core":
+  version "0.1.0"
+  resolved "file:marp-report-core"
+  dependencies:
+    debug "^4.4.1"
+    gray-matter "^4.0.3"
+    remark-gfm "^3.0.0"
+    remark-parse "^10.0.0"
+    remark-slug "^7.0.0"
+    unified "^10.1.2"
+    unist-util-remove-position "^4.0.1"
+    unist-util-visit "^4.1.1"
+    zod "^3.23.8"
+
+"marp-report-react@file:../marp-report-react":
+  version "0.1.0"
+  resolved "file:marp-report-react"
+  dependencies:
+    classnames "^2.3.2"
+    cropperjs "^1.5.13"
+    react-cropper "^2.3.3"
+
 mathjax-full@^3.2.2:
   version "3.2.2"
   resolved "https://registry.npmjs.org/mathjax-full/-/mathjax-full-3.2.2.tgz"
@@ -4624,7 +4656,7 @@ mrmime@^1.0.0:
   resolved "https://registry.npmjs.org/mrmime/-/mrmime-1.0.1.tgz"
   integrity sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==
 
-ms@^2.1.1:
+ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
@@ -4633,11 +4665,6 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz"
   integrity sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==
-
-ms@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
-  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 nanoid@^3.3.4:
   version "3.3.4"
@@ -5438,7 +5465,7 @@ react-cropper@^2.3.3:
   dependencies:
     cropperjs "^1.5.13"
 
-react-dom@^18.2.0, react-dom@>=16.3.0:
+react-dom@^18.2.0, react-dom@>=16.3.0, react-dom@>=17:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -5451,7 +5478,7 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react@^16.8.1, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=0.14.9, react@>=15, react@>=16.3.0, react@>=17.0.2:
+react@^16.8.1, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=0.14.9, react@>=15, react@>=16.3.0, react@>=17, react@>=17.0.2:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -6211,6 +6238,11 @@ unbox-primitive@^1.0.2:
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
 
+undici-types@~7.10.0:
+  version "7.10.0"
+  resolved "https://registry.npmjs.org/undici-types/-/undici-types-7.10.0.tgz"
+  integrity sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==
+
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-2.0.0.tgz"
@@ -6633,6 +6665,16 @@ z-schema@~5.0.2:
     validator "^13.7.0"
   optionalDependencies:
     commander "^9.4.1"
+
+zod@^3.23.8:
+  version "3.25.76"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.25.76.tgz"
+  integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
+
+zod@^4.0.17:
+  version "4.0.17"
+  resolved "https://registry.npmjs.org/zod/-/zod-4.0.17.tgz"
+  integrity sha512-1PHjlYRevNxxdy2JZ8JcNAw7rX8V9P1AKkP+x/xZfxB0K5FYfuV+Ug6P/6NVSR2jHQ+FzDDoDHS04nYUsOIyLQ==
 
 zwitch@^2.0.0:
   version "2.0.4"

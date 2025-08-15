@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import classNames from 'classnames'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 export type MovableItem = {
   id: string
@@ -16,7 +16,8 @@ export type MovableAreaProps = {
   items: MovableItem[]
 }
 
-export const MovableArea: React.FC<MovableAreaProps> = ({ width = 600, height = 300, items }) => {
+export const MovableArea: React.FC<MovableAreaProps> = ({ width = 600, height = 300, items }: MovableAreaProps) => {
+  // Initialize positions from props (server-side safe)
   const [positions, setPositions] = useState<Record<string, { x: number; y: number }>>(() =>
     Object.fromEntries(items.map((i) => [i.id, { x: i.x, y: i.y }]))
   )

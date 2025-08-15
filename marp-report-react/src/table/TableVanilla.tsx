@@ -7,7 +7,7 @@ type TableData = {
   align?: Array<'left' | 'center' | 'right'>
 }
 
-export const TableVanilla: React.FC<{ json: string }> = ({ json }) => {
+export const TableVanilla: React.FC<{ json: string }> = ({ json }: { json: string }) => {
   const data: TableData = useMemo(() => {
     try {
       const parsed = JSON.parse(json || '{}')
@@ -50,7 +50,7 @@ export const TableVanilla: React.FC<{ json: string }> = ({ json }) => {
           </tbody>
         </table>
       </div>
-      <style jsx>{`
+      <style>{`
         .tv-wrap { margin: 1.5rem auto; }
         .tv-caption { text-align: center; color: #64748b; font-size: 0.9rem; margin-bottom: 0.5rem; }
         .tv-scroll { overflow-x: auto; }
