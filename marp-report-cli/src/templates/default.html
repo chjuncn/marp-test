@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}">
+    {{#author}}<meta name="author" content="{{author}}">{{/author}}
+    {{#date}}<meta name="date" content="{{date}}">{{/date}}
+
+    <!-- React and ReactDOM -->
+    {{#includeReactBundle}}
+    <script crossorigin src="{{cdnUrl}}/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="{{cdnUrl}}/react-dom@18/umd/react-dom.production.min.js"></script>
+    {{/includeReactBundle}}
+
+    <!-- Default Styles -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .report-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .report-header {
+            margin-bottom: 3rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 2rem;
+        }
+
+        .report-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        .report-meta {
+            color: #718096;
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .report-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .report-content {
+            margin-top: 2rem;
+        }
+
+        .report-element {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            background-color: #f7fafc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .report-element:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e0;
+        }
+
+        .report-element-type {
+            font-size: 0.75rem;
+            color: #4a5568;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background-color: #edf2f7;
+            border-radius: 6px;
+            display: inline-block;
+        }
+
+        .loading-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4a5568;
+        }
+
+        .spinner {
+            width: 1rem;
+            height: 1rem;
+            border: 2px solid #e2e8f0;
+            border-top: 2px solid #4299e1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .next-steps {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .next-steps h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .next-steps li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .next-steps li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Theme variations */
+        .theme-dark {
+            background-color: #1a202c;
+            color: #f7fafc;
+        }
+
+        .theme-dark .report-title {
+            color: #f7fafc;
+        }
+
+        .theme-dark .report-element {
+            background-color: #2d3748;
+            border-color: #4a5568;
+            color: #e2e8f0;
+        }
+
+        .theme-dark .report-element-type {
+            background-color: #4a5568;
+            color: #e2e8f0;
+        }
+
+        .theme-dark .report-header {
+            border-color: #4a5568;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .report-container {
+                padding: 1rem;
+            }
+
+            .report-title {
+                font-size: 2rem;
+            }
+
+            .report-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+
+        /* Custom CSS from frontmatter */
+        {{#customCss}}
+        {{{customCss}}}
+        {{/customCss}}
+    </style>
+</head>
+<body class="theme-{{theme}}">
+    <div class="report-container">
+        <header class="report-header">
+            <h1 class="report-title">{{title}}</h1>
+            <div class="report-meta">
+                {{#author}}
+                <div class="report-meta-item">
+                    <span>👤</span>
+                    <span>{{author}}</span>
+                </div>
+                {{/author}}
+                <div class="report-meta-item">
+                    <span>📅</span>
+                    <span>{{date}}</span>
+                </div>
+                {{#description}}
+                <div class="report-meta-item">
+                    <span>📄</span>
+                    <span>{{description}}</span>
+                </div>
+                {{/description}}
+            </div>
+        </header>
+
+        <main class="report-content">
+            <div id="report-root">
+                <div class="report-element">
+                    <div class="report-element-type">Loading</div>
+                    <div class="loading-indicator">
+                        <div class="spinner"></div>
+                        <span>Loading interactive report content...</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Report Data -->
+    <script type="application/json" id="report-data">
+        {{{reportDataJson}}}
+    </script>
+
+    <!-- Report Renderer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reportData = JSON.parse(document.getElementById('report-data').textContent);
+            const rootElement = document.getElementById('report-root');
+
+            // Create a more detailed preview of the report data
+            const elementCount = {
+                movable: 0,
+                images: 0,
+                tabs: 0,
+                tables: 0,
+                merged: 0
+            };
+
+            // Simple count estimation (you can enhance this based on your AST structure)
+            const dataStr = JSON.stringify(reportData.content);
+            elementCount.movable = (dataStr.match(/movable-block/g) || []).length;
+            elementCount.images = (dataStr.match(/image-editor/g) || []).length;
+            elementCount.tabs = (dataStr.match(/code-tabs/g) || []).length;
+            elementCount.tables = (dataStr.match(/table-vanilla/g) || []).length;
+            elementCount.merged = (dataStr.match(/report-merge/g) || []).length;
+
+            rootElement.innerHTML = `
+                <div class="report-element">
+                    <div class="report-element-type">Report Summary</div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                        <div style="text-align: center; padding: 1rem; background: rgba(66, 153, 225, 0.1); border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #4299e1;">${elementCount.movable}</div>
+                            <div style="font-size: 0.875rem; color: #718096;">Movable Blocks</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(72, 187, 120, 0.1); border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #48bb78;">${elementCount.images}</div>
+                            <div style="font-size: 0.875rem; color: #718096;">Image Editors</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(237, 137, 54, 0.1); border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #ed8936;">${elementCount.tabs}</div>
+                            <div style="font-size: 0.875rem; color: #718096;">Code Tabs</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(159, 122, 234, 0.1); border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #9f7aea;">${elementCount.tables}</div>
+                            <div style="font-size: 0.875rem; color: #718096;">Tables</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: rgba(245, 101, 101, 0.1); border-radius: 8px;">
+                            <div style="font-size: 1.5rem; font-weight: bold; color: #f56565;">${elementCount.merged}</div>
+                            <div style="font-size: 0.875rem; color: #718096;">Merged Content</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-element">
+                    <div class="report-element-type">Raw Report Data</div>
+                    <pre class="code-block">${JSON.stringify(reportData, null, 2)}</pre>
+                </div>
+
+                <div class="next-steps">
+                    <h3>🚀 Next Steps</h3>
+                    <ul>
+                        <li>Integrate this HTML with your React application</li>
+                        <li>Use the report data from the #report-data script tag</li>
+                        <li>Import marp-report-react components to render interactive elements</li>
+                        <li>Customize the template by modifying templates/default.html</li>
+                        <li>Add your own CSS themes and styling</li>
+                    </ul>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

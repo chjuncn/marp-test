@@ -1,0 +1,955 @@
+{
+  "metadata": {
+    "filename": "test-report.md",
+    "generatedAt": "2025-08-18T10:01:48.988Z",
+    "version": "0.1.0"
+  },
+  "frontmatter": {
+    "title": "A Fancy Report demo",
+    "description": "Demo of the Report fenced block rendering inside a blog post.",
+    "author": "Demo",
+    "date": "2025-05-06T00:00:00.000Z"
+  },
+  "content": {
+    "type": "root",
+    "children": [
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "My Report",
+            "position": {
+              "start": {
+                "line": 2,
+                "column": 3,
+                "offset": 3
+              },
+              "end": {
+                "line": 2,
+                "column": 12,
+                "offset": 12
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 2,
+            "column": 1,
+            "offset": 1
+          },
+          "end": {
+            "line": 2,
+            "column": 12,
+            "offset": 12
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "my-report"
+          },
+          "id": "my-report"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "This is a continuous article (not slides).",
+            "position": {
+              "start": {
+                "line": 4,
+                "column": 1,
+                "offset": 14
+              },
+              "end": {
+                "line": 4,
+                "column": 43,
+                "offset": 56
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "offset": 14
+          },
+          "end": {
+            "line": 4,
+            "column": 43,
+            "offset": 56
+          }
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Lists, paragraphs, headings",
+                    "position": {
+                      "start": {
+                        "line": 6,
+                        "column": 3,
+                        "offset": 60
+                      },
+                      "end": {
+                        "line": 6,
+                        "column": 30,
+                        "offset": 87
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 6,
+                    "column": 3,
+                    "offset": 60
+                  },
+                  "end": {
+                    "line": 6,
+                    "column": 30,
+                    "offset": 87
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 6,
+                "column": 1,
+                "offset": 58
+              },
+              "end": {
+                "line": 6,
+                "column": 30,
+                "offset": 87
+              }
+            }
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "GFM tables:",
+                    "position": {
+                      "start": {
+                        "line": 7,
+                        "column": 3,
+                        "offset": 90
+                      },
+                      "end": {
+                        "line": 7,
+                        "column": 14,
+                        "offset": 101
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 7,
+                    "column": 3,
+                    "offset": 90
+                  },
+                  "end": {
+                    "line": 7,
+                    "column": 14,
+                    "offset": 101
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 7,
+                "column": 1,
+                "offset": 88
+              },
+              "end": {
+                "line": 7,
+                "column": 14,
+                "offset": 101
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 6,
+            "column": 1,
+            "offset": 58
+          },
+          "end": {
+            "line": 7,
+            "column": 14,
+            "offset": 101
+          }
+        }
+      },
+      {
+        "type": "table",
+        "align": [
+          null,
+          "right"
+        ],
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Item",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 3,
+                        "offset": 105
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 7,
+                        "offset": 109
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 9,
+                    "column": 1,
+                    "offset": 103
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 9,
+                    "offset": 111
+                  }
+                }
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Value",
+                    "position": {
+                      "start": {
+                        "line": 9,
+                        "column": 10,
+                        "offset": 112
+                      },
+                      "end": {
+                        "line": 9,
+                        "column": 15,
+                        "offset": 117
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 9,
+                    "column": 9,
+                    "offset": 111
+                  },
+                  "end": {
+                    "line": 9,
+                    "column": 17,
+                    "offset": 119
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 9,
+                "column": 1,
+                "offset": 103
+              },
+              "end": {
+                "line": 9,
+                "column": 17,
+                "offset": 119
+              }
+            }
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "A",
+                    "position": {
+                      "start": {
+                        "line": 11,
+                        "column": 3,
+                        "offset": 139
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 4,
+                        "offset": 140
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 11,
+                    "column": 1,
+                    "offset": 137
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 9,
+                    "offset": 145
+                  }
+                }
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "42",
+                    "position": {
+                      "start": {
+                        "line": 11,
+                        "column": 13,
+                        "offset": 149
+                      },
+                      "end": {
+                        "line": 11,
+                        "column": 15,
+                        "offset": 151
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 11,
+                    "column": 9,
+                    "offset": 145
+                  },
+                  "end": {
+                    "line": 11,
+                    "column": 17,
+                    "offset": 153
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 11,
+                "column": 1,
+                "offset": 137
+              },
+              "end": {
+                "line": 11,
+                "column": 17,
+                "offset": 153
+              }
+            }
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "B",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 3,
+                        "offset": 156
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 4,
+                        "offset": 157
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 12,
+                    "column": 1,
+                    "offset": 154
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 9,
+                    "offset": 162
+                  }
+                }
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "99",
+                    "position": {
+                      "start": {
+                        "line": 12,
+                        "column": 13,
+                        "offset": 166
+                      },
+                      "end": {
+                        "line": 12,
+                        "column": 15,
+                        "offset": 168
+                      }
+                    }
+                  }
+                ],
+                "position": {
+                  "start": {
+                    "line": 12,
+                    "column": 9,
+                    "offset": 162
+                  },
+                  "end": {
+                    "line": 12,
+                    "column": 17,
+                    "offset": 170
+                  }
+                }
+              }
+            ],
+            "position": {
+              "start": {
+                "line": 12,
+                "column": 1,
+                "offset": 154
+              },
+              "end": {
+                "line": 12,
+                "column": 17,
+                "offset": 170
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "offset": 103
+          },
+          "end": {
+            "line": 12,
+            "column": 17,
+            "offset": 170
+          }
+        }
+      },
+      {
+        "type": "raw",
+        "data": {
+          "hName": "table-vanilla",
+          "hProperties": {
+            "data-json": "{\"caption\":\"Quarterly metrics\",\"columns\":[\"Metric\",\"Q1\",\"Q2\",\"Q3\",\"Q4\"],\"rows\":[[\"Users\",12000,13500,15000,17000],[\"MRR ($)\",\"$32,000\",\"$36,500\",\"$40,200\",\"$45,300\"],[\"Churn (%)\",2.3,2.1,2,1.9]],\"align\":[\"left\",\"right\",\"right\",\"right\",\"right\"]}"
+          }
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can even embed slides inside the report:",
+            "position": {
+              "start": {
+                "line": 29,
+                "column": 1,
+                "offset": 504
+              },
+              "end": {
+                "line": 29,
+                "column": 45,
+                "offset": 548
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 29,
+            "column": 1,
+            "offset": 504
+          },
+          "end": {
+            "line": 29,
+            "column": 45,
+            "offset": 548
+          }
+        }
+      },
+      {
+        "type": "code",
+        "lang": "markdown:marp",
+        "meta": null,
+        "value": "# Slide 1\n\n![Cat 1](/assets/report/cat1.jpeg)\n\n---\n\n# Slide 2\n\n![Cat 2](/assets/report/cat2.png)\n\n---\n\n# Slide 3\n\n![Cat 3](/assets/report/cat3.jpeg)\n\n---\n\n# Slide 4\n\n![Cat 4](/assets/report/cat4.png)",
+        "position": {
+          "start": {
+            "line": 31,
+            "column": 1,
+            "offset": 550
+          },
+          "end": {
+            "line": 53,
+            "column": 4,
+            "offset": 770
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Embedded Monthly Product Report"
+          }
+        ],
+        "data": {
+          "hProperties": {
+            "id": "embedded-monthly-product-report"
+          },
+          "id": "embedded-monthly-product-report"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Author: "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "Alice"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "value": "\nDate: "
+          },
+          {
+            "type": "strong",
+            "children": [
+              {
+                "type": "text",
+                "value": "\"2025-05-01T00:00:00.000Z\""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "KPIs"
+          }
+        ],
+        "data": {
+          "hProperties": {
+            "id": "kpis"
+          },
+          "id": "kpis"
+        }
+      },
+      {
+        "type": "table",
+        "align": [
+          null,
+          "right"
+        ],
+        "children": [
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Metric"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Users"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "12450"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "MRR"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "$38,200"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "children": [
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Churn"
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2.1%"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 2,
+        "children": [
+          {
+            "type": "text",
+            "value": "Highlights"
+          }
+        ],
+        "data": {
+          "hProperties": {
+            "id": "highlights"
+          },
+          "id": "highlights"
+        }
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "start": null,
+        "spread": false,
+        "children": [
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Top region: North America"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "spread": false,
+            "checked": null,
+            "children": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "New features: Segment filters, PDF export"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Editable image (image_editor)"
+          }
+        ],
+        "data": {
+          "hProperties": {
+            "id": "editable-image-image_editor"
+          },
+          "id": "editable-image-image_editor"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can put an image into an editor so viewers can crop/download it from the report:"
+          }
+        ]
+      },
+      {
+        "type": "raw",
+        "data": {
+          "hName": "image-editor",
+          "hProperties": {
+            "data-src": "/assets/report/cat1.jpeg",
+            "data-width": "640"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Python plot example"
+          }
+        ],
+        "data": {
+          "hProperties": {
+            "id": "python-plot-example"
+          },
+          "id": "python-plot-example"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "Below we embed an SVG produced by a Python script (e.g., Matplotlib "
+          },
+          {
+            "type": "inlineCode",
+            "value": "plt.savefig('python-plot.svg')"
+          },
+          {
+            "type": "text",
+            "value": "). In real usage, generate the SVG/PNG in your build step and reference it here."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "image",
+            "title": "Figure: Output from Python/Matplotlib",
+            "url": "/assets/report/python-plot.svg",
+            "alt": "Sample Python plot"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Interactive movable area example"
+          }
+        ],
+        "data": {
+          "hProperties": {
+            "id": "interactive-movable-area-example"
+          },
+          "id": "interactive-movable-area-example"
+        }
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "type": "text",
+            "value": "You can declare a movable area with items via a fenced code block. Data can also be provided from "
+          },
+          {
+            "type": "inlineCode",
+            "value": "data-report.md"
+          },
+          {
+            "type": "text",
+            "value": " by putting a JSON object into a variable and referencing it with "
+          },
+          {
+            "type": "inlineCode",
+            "value": "{{movables}}"
+          },
+          {
+            "type": "text",
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "raw",
+        "data": {
+          "hName": "movable-block",
+          "hProperties": {
+            "data-json": "{\"width\":640,\"height\":280,\"items\":[{\"id\":\"A\",\"x\":40,\"y\":30,\"content\":\"Alpha\"},{\"id\":\"B\",\"x\":200,\"y\":120,\"content\":\"Beta\"},{\"id\":\"C\",\"x\":360,\"y\":60,\"content\":\"Gamma\"}]}"
+          }
+        }
+      },
+      {
+        "type": "heading",
+        "depth": 1,
+        "children": [
+          {
+            "type": "text",
+            "value": "Raw Markdown sources",
+            "position": {
+              "start": {
+                "line": 86,
+                "column": 3,
+                "offset": 1645
+              },
+              "end": {
+                "line": 86,
+                "column": 23,
+                "offset": 1665
+              }
+            }
+          }
+        ],
+        "position": {
+          "start": {
+            "line": 86,
+            "column": 1,
+            "offset": 1643
+          },
+          "end": {
+            "line": 86,
+            "column": 23,
+            "offset": 1665
+          }
+        },
+        "data": {
+          "hProperties": {
+            "id": "raw-markdown-sources"
+          },
+          "id": "raw-markdown-sources"
+        }
+      },
+      {
+        "type": "raw",
+        "data": {
+          "hName": "code-tabs",
+          "hProperties": {
+            "data-tabs": "[{\"title\":\"test-report.md\",\"code\":\"---\\ntitle: A Fancy Report demo\\ndescription: Demo of the Report fenced block rendering inside a blog post.\\nauthor: Demo\\ndate: 2025-05-06\\n---\\n\\n# My Report\\n\\nThis is a continuous article (not slides).\\n\\n- Lists, paragraphs, headings\\n- GFM tables:\\n\\n| Item | Value |\\n| ---- | ----: |\\n| A    |    42 |\\n| B    |    99 |\\n\\n\\n```table_theme_vanilla\\n{\\n  \\\"caption\\\": \\\"Quarterly metrics\\\",\\n  \\\"columns\\\": [\\\"Metric\\\", \\\"Q1\\\", \\\"Q2\\\", \\\"Q3\\\", \\\"Q4\\\"],\\n  \\\"align\\\": [\\\"left\\\", \\\"right\\\", \\\"right\\\", \\\"right\\\", \\\"right\\\"],\\n  \\\"rows\\\": [\\n    [\\\"Users\\\", 12000, 13500, 15000, 17000],\\n    [\\\"MRR ($)\\\", \\\"$32,000\\\", \\\"$36,500\\\", \\\"$40,200\\\", \\\"$45,300\\\"],\\n    [\\\"Churn (%)\\\", 2.3, 2.1, 2.0, 1.9]\\n  ]\\n}\\n```\\n\\n\\nYou can even embed slides inside the report:\\n\\n```markdown:marp\\n# Slide 1\\n\\n![Cat 1](/assets/report/cat1.jpeg)\\n\\n---\\n\\n# Slide 2\\n\\n![Cat 2](/assets/report/cat2.png)\\n\\n---\\n\\n# Slide 3\\n\\n![Cat 3](/assets/report/cat3.jpeg)\\n\\n---\\n\\n# Slide 4\\n\\n![Cat 4](/assets/report/cat4.png)\\n```\\n\\n\\n```report-merge\\ntemplate: template-report.md\\ndata: data-report.md\\n```\\n\\n```markdown:report\\n\\n# Python plot example\\n\\nBelow we embed an SVG produced by a Python script (e.g., Matplotlib `plt.savefig('python-plot.svg')`). In real usage, generate the SVG/PNG in your build step and reference it here.\\n\\n![Sample Python plot](/assets/report/python-plot.svg \\\"Figure: Output from Python/Matplotlib\\\")\\n\\n# Interactive movable area example\\n\\nYou can declare a movable area with items via a fenced code block. Data can also be provided from `data-report.md` by putting a JSON object into a variable and referencing it with `{{movables}}`.\\n\\n```movable\\n{\\n  \\\"width\\\": 640,\\n  \\\"height\\\": 280,\\n  \\\"items\\\": [\\n    { \\\"id\\\": \\\"A\\\", \\\"x\\\": 40,  \\\"y\\\": 30,  \\\"content\\\": \\\"Alpha\\\" },\\n    { \\\"id\\\": \\\"B\\\", \\\"x\\\": 200, \\\"y\\\": 120, \\\"content\\\": \\\"Beta\\\" },\\n    { \\\"id\\\": \\\"C\\\", \\\"x\\\": 360, \\\"y\\\": 60,  \\\"content\\\": \\\"Gamma\\\" }\\n  ]\\n}\\n```\\n\\n\\n# Raw Markdown sources\\n\\n```report-tabs\\ntest-report.md\\ntemplate-report.md\\ndata-report.md\\n```\\n\",\"lang\":\"markdown\"},{\"title\":\"template-report.md\",\"code\":\"---\\ntitle: {{title}}\\nauthor: {{author}}\\ndate: {{date}}\\n---\\n\\n# {{title}}\\n\\nAuthor: **{{author}}**\\nDate: **{{date}}**\\n\\n## KPIs\\n\\n| Metric | Value |\\n| ------ | ----: |\\n| Users  | {{kpi.users}} |\\n| MRR    | {{kpi.mrr}} |\\n| Churn  | {{kpi.churn}}% |\\n\\n## Highlights\\n\\n- Top region: {{highlights.topRegion}}\\n- New features: {{highlights.newFeatures}}\\n\\n\\n# Editable image (image_editor)\\n\\nYou can put an image into an editor so viewers can crop/download it from the report:\\n\\n```image_editor\\n{ \\\"src\\\": \\\"/assets/report/cat1.jpeg\\\", \\\"width\\\": 640 }\\n```\\n\\n\\n\",\"lang\":\"markdown\"},{\"title\":\"data-report.md\",\"code\":\"---\\ntitle: Embedded Monthly Product Report\\nauthor: Alice\\ndate: 2025-05-01\\nkpi:\\n  users: 12450\\n  mrr: $38,200\\n  churn: 2.1\\nhighlights:\\n  topRegion: North America\\n  newFeatures: Segment filters, PDF export\\n---\\n\\nThis file only holds data (front matter). Body can be empty.\\n\\n\\n\",\"lang\":\"markdown\"}]"
+          }
+        }
+      }
+    ],
+    "position": {
+      "start": {
+        "line": 1,
+        "column": 1,
+        "offset": 0
+      },
+      "end": {
+        "line": 93,
+        "column": 1,
+        "offset": 1735
+      }
+    }
+  }
+}
